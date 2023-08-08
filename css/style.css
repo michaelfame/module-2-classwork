@@ -138,6 +138,18 @@ nav a:hover {
   flex-basis: calc(50% -1em);
   display: flex;
   align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9rem;
+}
+.contact address a {
+
+
+  
 }
 
 
