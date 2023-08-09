@@ -4,7 +4,7 @@
 :root {
 --primary: rgb(82, 109, 151);
 --secondary: rgb(13, 210, 217);
---tertiary: rgb(46, 186, 224);
+--tertiary: rgb(19, 72, 86);
 --dark: rgba(49,52,5,1);
 --light: rgba(238,238,247,1)
 }
@@ -84,6 +84,13 @@ nav a:hover {
 
  .hero-banner div {
   flex: 0 0 50%;
+ }
+
+ .hero-banner div img {
+  flex: 50 50 100%;
+  display:inline-flex;
+  line-height:auto;
+
  }
 
  .hero-banner h2 { 
