@@ -2,30 +2,40 @@
   box-sizing: border-box;
 }
 :root {
---primary: rgba(68, 88,119, 1);
---secondary: rgba(146,204,206, 1);
---tertiary: rgba(49,52,5,1);
+--primary: rgb(82, 109, 151);
+--secondary: rgb(13, 210, 217);
+--tertiary: rgb(46, 186, 224);
 --dark: rgba(49,52,5,1);
 --light: rgba(238,238,247,1)
- 
-
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-  
+  line-height: 1.2;  
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 header{
-  padding:15px, 0 15px 0;
+  padding:10px, 0 15px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  background-color: var(tertiary);
+  background-color: var(--tertiary);
 
 }
 
@@ -37,7 +47,7 @@ header{
    
 nav a {
   text-decoration: none;
-  padding:5px, 10px;
+  padding: 5px 10px;
   color: var(--secondary);
   margin-right: 10px;
   background-image: linear-gradient(270deg, var(--secondary) 0%,var(--secondary) 100%);
@@ -46,12 +56,10 @@ nav a {
   background-position: bottom;
   transition: all 0.25 ease-in;
   font-size: 1.4rem ;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
-
                                                                       
+}
+nav a:last-child {
+  margin-right: 0%;
 }
 
 nav a:hover {
@@ -61,11 +69,11 @@ nav a:hover {
 
  .hero-banner {
   background-color: rgb(81,131,212);
-  background-image: url("/images/02-hero-bg.jpg") linear-gradient(100deg, var(--secondary) 0%,var(--primary) 100%);
+  background-image: url("/images/02-hero-bg.jpg") linear-gradient(50%, var(--secondary) 0%,var(--primary) 0.9rem);
   background-size: cover;
   background-position: center;
-  background-blend-mode: center;
-  min-height: 30vh;
+  background-blend-mode: saturation;
+  min-height: 20vh;
   color: var(--light);
   padding: 2% 6%;
   display: flex;
@@ -75,12 +83,12 @@ nav a:hover {
  }
 
  .hero-banner div {
-  flex: 0 0 65%;
+  flex: 0 0 50%;
  }
 
  .hero-banner h2 { 
   background-color: var( --secondary);
-  line-height: 0.5.1;
+  line-height: 1.2;
   color: var(--tertiary);
   padding: 5% 10%;
   display: inline;
@@ -106,7 +114,7 @@ nav a:hover {
 } 
 
 .page-section > h2 {
-  flex: 0 0 77%;
+  flex: 0 0 20%;
   text-align: right;
   padding-right: 15px;
   border-right: 4px solid var(--primary);
@@ -146,13 +154,23 @@ nav a:hover {
   transition: all 0.5s;
   font-size: 0.9rem;
 }
+
+.flex-item:first-child {
+  min-height: 400px;
+  flex-basis: 100%;
+}
+
+.flex-item:hover {
+  background-color: rgba(0,0, 0,3);
+}
+
 .contact address a {
   color: var(--tertiary);
   padding: 5px;
   text-decoration: none;
   font-style: normal;
   margin: 0 0.2rem 0.1rem;
-  background-image: linear-gradient(270deg, var(--primary) 0%,var(--secondary) 100%);;
+  background-image: linear-gradient(270deg, var(--primary) 0%,var(--primary) 100%);
   
 }
 
@@ -184,7 +202,7 @@ header h1 {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
-  font-size: 10vw;
+  font-size: 7vw;
 }
 
 header nav {
@@ -202,23 +220,24 @@ header nav {
   margin-bottom: 20px;
   padding-bottom: 10px;
   text-align: left;
-  font-size: 7vw;
-   
-
-
-
+  font-size: 4vw;
 }
-
-
-h1,
-h2, 
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+                                                                                            
+@media screen and (max-width: 768px){
+  .flex-item,
+  .flex-item:first-child {
+    flex-basis: 100%;
+  }
+  .flex-item:first-child {
+    min-height: 100px;
+  }
 }
+  .hero-banner {
+    justify-content: center;
+    text-align: center;
+  }
+   .contact address {
+    flex-direction: column;
+    align-items: flex-start;
+   }
 
-p {
-  margin: 0;
-}
